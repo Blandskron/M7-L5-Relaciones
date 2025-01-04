@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Muchos a Muchos</title>
+</head>
+<body>
+    <h1>Clientes y Productos (Muchos a Muchos)</h1>
+    <ul>
+        {% for cliente in clientes %}
+            <li>{{ cliente.nombre }}
+                <ul>
+                    {% for producto in cliente.producto_set.all %}
+                        <li>{{ producto.nombre }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

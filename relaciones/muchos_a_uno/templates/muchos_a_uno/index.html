@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Muchos a Uno</title>
+</head>
+<body>
+    <h1>Regiones y Estados (Muchos a Uno)</h1>
+    <ul>
+        {% for region in regiones %}
+            <li>{{ region.nombre }}
+                <ul>
+                    {% for estado in region.estados.all %}
+                        <li>{{ estado.nombre }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

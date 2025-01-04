@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uno a Uno</title>
+</head>
+<body>
+    <h1>Trabajadores y Curriculums (Uno a Uno)</h1>
+    <ul>
+        {% for trabajador in trabajadores %}
+            <li>{{ trabajador.nombre }} - {{ trabajador.curriculum.documento }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
